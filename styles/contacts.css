@@ -1,0 +1,130 @@
+.contacts{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left:5vw;
+    padding-right:5vw;
+    /* border: 2px solid white; */
+}
+.contacts .contact-box{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+}
+.contacts .contact-box .contact-text{
+    width: 50%;
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.contacts .contact-box .contact-button{
+    width: 50%;
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 3vw;
+}
+.contacts .contact-box .contact-button button{
+    padding: 25px 50px;
+    color:rgb(212, 212, 212);
+    background: #7836c6;
+    font-size: 1.2rem;
+    font-family: 'Silkscreen', cursive;
+    font-weight:bolder;
+    border-radius:10px;
+}
+.contacts .contact-box .contact-button button:hover{
+    animation-name: onHover;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    color: white;
+    background-color: #843cd6;
+}
+
+.contacts .icon-footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+}
+.contacts .icon-footer .icon-box{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 55%;
+height: 100px;
+margin-right: 20vw;
+}
+.contacts .icon-footer .web-demo-name{
+color:white;
+opacity: 0.3;
+font-size: 18px;
+font-weight:lighter;
+display: flex;
+justify-content:flex-end;
+align-items: center;
+width: 45%;
+padding-right: 3vw;
+}
+@keyframes onHover {
+    0% {
+        font-size: 1.2rem;
+        padding: 25px 50px;
+        }
+    50% {
+        font-size: 1.3rem;
+        padding: 27px 53px;
+        }
+    100%{
+        font-size: 1.2rem;
+        padding: 25px 50px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .contacts{
+        text-align: center;
+        height: 500px;
+    }
+    .contacts .contact-box{
+        flex-direction: column;
+    }
+    .contacts .contact-box .contact-text{
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contacts .contact-box .contact-button{
+        width: 100%;
+        align-items: center;
+        padding: 0vw;
+    }
+
+    .contacts .icon-footer{
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contacts .icon-footer .icon-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-right: 0 20vw;
+    padding: 20px;
+    }
+    .contacts .icon-footer .web-demo-name{
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 50px;
+    }
+  }

@@ -1,0 +1,106 @@
+ .navigation{
+  width: 100%;
+  height: 11vh;
+  padding: 0px 5vw;
+  background:#100f0ffc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /* border: 2px solid red; */
+}
+.navigation .buisness-name-box{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  
+}
+.navigation .buisness-name-box h1{
+  display: flex;
+  font-size: 4vh;
+  font-weight: normal;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+.navigation .navigation-box{
+    display: flex;
+    align-items: center;
+
+ }
+
+
+ .navigation .navigation-box .hamburger{
+  display: none;
+  cursor: pointer;
+}
+.navigation .navigation-box .hamburger .bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color:white;
+}
+
+
+.navigation .navigation-box .side-meniu{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  font-size: 1rem;
+}
+.navigation .navigation-box .side-meniu .selected{
+  border-bottom: 1px solid  #e2cb56;
+  transition:1s;
+}
+
+.navigation .navigation-box .side-meniu a{
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+  margin: 0 1.7vw;
+  
+}
+.navigation .navigation-box .side-meniu a:hover{
+  color: white;
+
+}
+@media screen and (max-width: 900px) {
+  .navigation .navigation-box .hamburger{
+    left: 100%;
+    display: block;
+  }
+  .navigation .navigation-box .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .navigation .navigation-box .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg) ;
+  }
+  .navigation .navigation-box .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg) ;
+  }
+  .navigation .navigation-box .side-meniu{
+    display: none;
+   }
+  .navigation .navigation-box .side-meniu.active{
+  display:flex;
+  position: fixed;
+  width: 100%;
+  height: 84vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #0e0e0e;
+  text-align:center;
+  transform: translateX(-88.25%) translateY(40vh) scaleX(1.5) scaleY(1.5);
+  }
+}
+
+
+
